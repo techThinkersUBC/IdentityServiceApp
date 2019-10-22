@@ -16,7 +16,7 @@
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: black;
-  border-bottom: 0.1rem solid #282c34;
+  border-bottom: 0.1rem solid #d6d8d6;
 }
 
 .App-link {

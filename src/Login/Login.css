@@ -2,6 +2,9 @@
 .Home {
     height: calc(100vh - 4rem);
 
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +16,7 @@
 
     background-color: white;
     border-radius: 0.25rem;
-    border: 0.1rem solid #282c34;
+    border: 0.1rem solid #d6d8d6;
 }
 
 .SignInModalInner {
@@ -40,6 +43,11 @@
     width: 100%;
 }
 
+.SignInModalImage {
+    margin-bottom: 2rem;
+    height: 2rem;
+}
+
 .SignInModalListInput {
     -webkit-appearance: none;
 
@@ -48,12 +56,12 @@
 
     padding: 0.5rem;
 
-    border: 0.1rem solid #282c34;
+    border: 0.1rem solid #d6d8d6;
 
     display: flex;
     justify-content: left;
     align-items: center;
-    border-top: 0.1rem solid #282c34;
+    border-top: 0.1rem solid #d6d8d6;
     color: #282c34;
     transition: background-color 0.2s;
     cursor: pointer;
@@ -61,4 +69,30 @@
 
 .SignInModalListOption:hover {
     background-color: rgba(199, 247, 232, 0.5);
+}
+
+.SignInModalButton {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #db0011;
+    cursor: pointer;
+}
+
+.SignInModalLink {
+    width: 50%;
+    height: 2rem;
+}
+
+.SignInModalButton:hover {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    background-color: #db0011;
 }

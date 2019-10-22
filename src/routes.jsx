@@ -9,15 +9,9 @@ import Score from './Agree/Agree.jsx';
 const Routes = () => (
     <Switch>
         Here
-        <Route path="/" exact>
-            <Login />
-        </Route>
-        <Route path="/:appId" exact>
-            <Login />
-        </Route>
-        <Route path="/agree/:appId" exact>
-            <Score />
-        </Route>
+        <Route path="/" component={Login} exact />
+        <Route path="/:appId" component={Login} exact />
+        <Route path="/agree/:appId" component={Score} exact />
     </Switch>
 );
 

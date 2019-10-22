@@ -1,8 +1,9 @@
 import React from 'react';
+import logo from './assets/hsbc-logo.svg';
 
 const Header = () => (
     <div className="App-header">
-        <div>HSBC</div>
+        <img src={logo} />
     </div>
 );
 
