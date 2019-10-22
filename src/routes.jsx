@@ -4,14 +4,12 @@ import {
     Route,
 } from "react-router-dom";
 import Login from './Login/Login.jsx';
-import Score from './Agree/Agree.jsx';
+import { default as Agree }from './Agree/AgreeContainer.jsx';
 
 const Routes = () => (
     <Switch>
-        Here
         <Route path="/" component={Login} exact />
-        <Route path="/:appId" component={Login} exact />
-        <Route path="/agree/:appId" component={Score} exact />
+        <Route path="/agree" component={Agree} exact />
     </Switch>
 );
 
