@@ -1,6 +1,5 @@
 
 .Home {
-    background-color: #09d3ac;
     height: calc(100vh - 4rem);
 
     display: flex;
@@ -14,6 +13,7 @@
 
     background-color: white;
     border-radius: 0.25rem;
+    border: 0.1rem solid #282c34;
 }
 
 .SignInModalInner {
@@ -26,7 +26,7 @@
 }
 
 .SignInModalTitle {
-    color: #09d3ac;
+    color: #282c34;;
     margin-bottom: 2rem;
     font-size: 1.5rem;
 }
@@ -40,10 +40,16 @@
     width: 100%;
 }
 
-.SignInModalListOption {
+.SignInModalListInput {
+    -webkit-appearance: none;
+
     width: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    padding: 0.5rem;
+
+    border: 0.1rem solid #282c34;
+
     display: flex;
     justify-content: left;
     align-items: center;
