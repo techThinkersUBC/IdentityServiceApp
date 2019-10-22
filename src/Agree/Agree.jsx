@@ -5,7 +5,7 @@ import AgreeModal from './AgreeModal.jsx';
 
 const Agree = (props) => (
     <div className="Agree">
-        <AgreeModal permissions={props.permissions} />
+        <AgreeModal permissions={props.permissions} acceptPermissions={props.acceptPermissions} />
     </div>
 );
 
@@ -15,6 +15,7 @@ Agree.propTypes = {
         name: PropTypes.string,
         endpoints: PropTypes.array,
     }),
+    acceptPermissions: PropTypes.func.isRequired,
 };
 
 export default Agree;

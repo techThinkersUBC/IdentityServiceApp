@@ -16,7 +16,7 @@ const AgreeModal = (props) => {
     return (
         <div className="AgreeModal">
             <div className="AgreeModaInner">
-                <img className="AgreeModalImage" src={logo}/>
+                <img className="AgreeModalImage" alt="HSBC Logo" src={logo}/>
                 <div className="AgreeModalTitle"><b>{name}</b> is requesting the following permissions.</div>
                 <li className="AgreeModalList">
                     {endpoints.map(endpoint => (
@@ -24,7 +24,7 @@ const AgreeModal = (props) => {
                     ))}
                 </li>
                 <Link className="AgreeModalLink" to={`/agree?appId=${props.appId}`}>
-                    <button className="AgreeModalButton">Accept ></button>
+                    <button className="AgreeModalButton" onClick={props.acceptPermissions}>Accept ></button>
                 </Link>
             </div>
         </div>
@@ -37,6 +37,7 @@ AgreeModal.propTypes = {
         name: PropTypes.string,
         endpoints: PropTypes.array,
     }),
+    acceptPermissions: PropTypes.func.isRequired,
 };
 
 AgreeModal.defautProps = {

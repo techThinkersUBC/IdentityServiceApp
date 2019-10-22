@@ -6,7 +6,7 @@
   height: 40vmin;
 }
 
-.App-header {
+.AppHeader {
   min-height: 4rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -17,6 +17,31 @@
   font-size: calc(10px + 2vmin);
   color: black;
   border-bottom: 0.1rem solid #d6d8d6;
+}
+
+.AppHeaderDescription {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #282c34;
+}
+
+.AppFooter {
+  min-height: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  border-top: 0.1rem solid #d6d8d6;
+}
+
+.AppFooterDisclaimer {
+  text-align: center;
+  font-size: 0.5rem;
+  color: #282c34;
 }
 
 .App-link {

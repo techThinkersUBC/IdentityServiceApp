@@ -1,17 +1,31 @@
 import React from 'react';
-import {
-    useLocation
-} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Login.css';
 import SignInModal from './LoginModal.jsx';
 
-const Home = () => {
-    let query = new URLSearchParams(useLocation().search);
+const Login = (props) => {
+    console.log('loginprop', props);
     return (
         <div className="Home">
-            <SignInModal appId={query.get("appId") || "1"} />
+            <SignInModal
+                appId={props.appId}
+                setName={props.setName}
+                setEmail={props.setEmail}
+                setPassword={props.setPassword}
+            />
         </div>
     );
 };
 
-export default Home;
+Login.propTypes = {
+    appId: PropTypes.string,
+    setEmail: PropTypes.func.isRequired,
+    setName: PropTypes.func.isRequired,
+    setPassword: PropTypes.func.isRequired,
+};
+
+Login.defautProps = {
+    appId: ""
+};
+
+export default Login;

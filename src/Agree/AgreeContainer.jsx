@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Agree from './Agree.jsx';
-import { getPermissions } from "../actions/agree.js";
+import { getPermissions, getSessionToken } from "../actions/agree.js";
 import { useLocation } from "react-router-dom";
 
 const AgreeContainer = (props) => {
@@ -12,10 +12,18 @@ const AgreeContainer = (props) => {
         props.getPermissions(query.get("appId") || "1");
     }, []);
 
-    console.log('render', props);
+    const acceptPermissions = () => {
+        const {
+            email,
+            password,
+            name,
+        } = props;
+
+        props.getSessionToken(query.get("appId"), name, email, password)
+    };
 
     return (
-        <Agree appId={props.appId} permissions={props.permissions} />
+        <Agree appId={props.appId} permissions={props.permissions} acceptPermissions={acceptPermissions} />
     );
 };
 
@@ -23,6 +31,9 @@ const mapStateToProps = (state) => {
     return {
         permissions: state.agree.permissions,
         loading: state.agree.loading,
+        name: state.login.name,
+        email: state.login.email,
+        password: state.login.password,
         error: state.agree.error,
     };
 };
@@ -30,6 +41,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
         getPermissions,
+        getSessionToken,
     }, dispatch);
 };
 

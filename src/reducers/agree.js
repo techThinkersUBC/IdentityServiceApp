@@ -1,7 +1,8 @@
 import {
     GET_APP_PERMISSIONS_REQUEST,
     GET_APP_PERMISSIONS_ERROR,
-    GET_APP_PERMISSIONS_SUCCESS
+    GET_APP_PERMISSIONS_SUCCESS,
+    GET_SESSION_TOKEN_SUCCESS
 } from '../actions/agree.js';
 
 export const initialState = {
@@ -32,6 +33,10 @@ export default function agreeReducer(state = initialState, action = {}) {
                 error: null,
                 permissions: action.payload,
             };
+        case GET_SESSION_TOKEN_SUCCESS:
+            const { callbackUrl, jwt } = action.payload;
+            window.open(callbackUrl + `?jwt=${jwt}`);
+            return state;
         default:
             return state;
     }
