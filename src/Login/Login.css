@@ -1,0 +1,58 @@
+
+.Home {
+    background-color: #09d3ac;
+    height: calc(100vh - 4rem);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignInModal {
+    min-height: 20rem;
+    min-width: 6rem;
+
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.SignInModalInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.SignInModalTitle {
+    color: #09d3ac;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.SignInModalList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.SignInModalListOption {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-top: 0.1rem solid #282c34;
+    color: #282c34;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.SignInModalListOption:hover {
+    background-color: rgba(199, 247, 232, 0.5);
+}
